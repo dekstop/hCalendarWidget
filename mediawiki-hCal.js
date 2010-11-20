@@ -4,7 +4,7 @@
  */
 
 // Adapt for your setup
-var libRoot = 'http://github.com/dekstop/hCalendarWidget/tree/master/lib';
+var libRoot = 'http://github.com/dekstop/hCalendarWidget/raw/master/lib';
 
 $(document).ready(function() {
 	// Inject CSS

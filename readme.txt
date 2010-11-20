@@ -17,14 +17,14 @@ Dependencies (included):
 * FullCalendar JQuery plugin, http://arshaw.com/fullcalendar/
 
 Code example:
-	<script type='text/javascript' src='hCalendarWidget.js'></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			new hCalendarWidget().display('#calendar');
-		});
-	</script>
-	
-	<div id="calendar"></div>
+  <script type='text/javascript' src='hCalendarWidget.js'></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      new hCalendarWidget().display('#calendar');
+    });
+  </script>
+  
+  <div id="calendar"></div>
 
 More complete example:
 * Cf. example.html
@@ -42,11 +42,10 @@ To embed this in a MediaWiki you would also need:
 
 Example:
 
-	<wikiscript type="text/javascript" src="http://github.com/dekstop/hCalendarWidget/tree/master/lib/fullcalendar-1.4.8/jquery/jquery-1.4.3.min.js"></wikiscript>
-	<wikiscript type="text/javascript" src="http://github.com/dekstop/hCalendarWidget/tree/master/lib/fullcalendar-1.4.8/jquery/jquery-ui-1.8.5.custom.min.js"></wikiscript>
-	<wikiscript type="text/javascript" src="http://github.com/dekstop/hCalendarWidget/tree/master/lib/fullcalendar-1.4.8/fullcalendar/fullcalendar.min.js"></wikiscript>
-	<wikiscript type="text/javascript" src="http://github.com/dekstop/hCalendarWidget/tree/master/hCalendarWidget.js"></wikiscript>
-	<wikiscript type="text/javascript" src="http://github.com/dekstop/hCalendarWidget/tree/master/mediawiki-hCal.js"></wikiscript>
+  <wikiscript type="text/javascript" src="http://github.com/dekstop/hCalendarWidget/raw/master//lib/fullcalendar-1.4.8/jquery/jquery-1.4.3.min.js"></wikiscript>
+  <wikiscript type="text/javascript" src="http://github.com/dekstop/hCalendarWidget/raw/master//lib/fullcalendar-1.4.8/jquery/jquery-ui-1.8.5.custom.min.js"></wikiscript>
+  <wikiscript type="text/javascript" src="http://github.com/dekstop/hCalendarWidget/raw/master//lib/fullcalendar-1.4.8/fullcalendar/fullcalendar.min.js"></wikiscript>
+  <wikiscript type="text/javascript" src="http://github.com/dekstop/hCalendarWidget/raw/master//hCalendarWidget.js"></wikiscript>
+  <wikiscript type="text/javascript" src="http://github.com/dekstop/hCalendarWidget/raw/master//mediawiki-hCal.js"></wikiscript>
 
-	<div id="calendar"></div>
-	
+  <div id="calendar"></div>
