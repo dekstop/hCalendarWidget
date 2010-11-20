@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>hCalendar Widget Example</title>
+
+	<script type="text/javascript" src="./lib/fullcalendar-1.4.8/jquery/jquery-1.4.3.min.js"></script>
+	<script type="text/javascript" src="./lib/fullcalendar-1.4.8/jquery/jquery-ui-1.8.5.custom.min.js"></script>
+	<script type="text/javascript" src="./lib/fullcalendar-1.4.8/fullcalendar/fullcalendar.min.js"></script>
+
+	<script type="text/javascript" src="./hCalendarWidget.js"></script>
+
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function() {
+			// Load widget
+			new hCalendarWidget().display('#calendar');
+			// Scroll to first event
+			$('#calendar').fullCalendar('gotoDate', 2010, 9, 1);
+		});
+	</script>
+
+	<style type="text/css" media="screen">
+		body {
+			color: #000000; 
+			font-family: Helvetica, Arial, sans-serif; 
+			font-size: 1em;
+			margin-top: 30px;
+			margin-left: 40px;
+			margin-right: 40px;
+			margin-bottom: 30px;
+		}
+		h1 {
+			font-family: Garamond, Helvetica, Arial, sans-serif; 
+			font-size: 3em;
+		}
+		h2 {
+			margin-top: 1em;
+			font-family: Trebuchet, Helvetica, Arial, sans-serif; 
+		}
+		pre {
+			color: #00dd00;
+			background: #000000;
+			padding: 1em;
+			width: 100%;
+			overflow: auto;
+		}
+	</style>
+
+	<link rel="stylesheet" type="text/css" href="./lib/fullcalendar-1.4.8/fullcalendar/fullcalendar.css" />
+	<style type="text/css" media="screen">
+		#calendar { 
+			width: 900px; 
+			margin: 0 auto; 
+		}
+	</style>
+	
+</head>
+
+<body>
+
+<h1>hCalendar Widget Example</h1>
+
+<p><a href="http://github.com/dekstop/hCalendarWidget">hCalendarWidget</a> is a JavaScript widget that loads hCalendar markup from the current page and displays them in a Google Calendar-style UI. It's really just a bit of glue code around the hCalendar microformat, and the FullCalendar JQuery plugin.</p>
+
+<p><small>hCalendarWidget was created by <a href="http://dekstop.de/">martind</a>.</small></p>
+
+<h2>Example</h2>
+
+<p>Here are a few events marked up with the hCalendar microformat:</p>
+
+<h3>Site Relaunch</h3>
+<ul>
+	<li><span class="vevent" title="Site Relaunch"><span class="dtstart">2010-10-01</span>: <span class="summary">Milestone 1</span></span></li>
+	<li><span class="vevent" title="Site Relaunch"><span class="dtstart">2010-10-09</span>: <span class="summary">Milestone 2</span></span></li> 
+	<li><span class="vevent" title="Site Relaunch"><span class="dtstart">2010-10-09</span> to <span class="dtend">2010-10-18</span>: <span class="summary">QA</span></span> </li>
+	<li><span class="vevent" title="Site Relaunch"><span class="dtstart">2010-10-25</span>: <span class="summary">Launch</span></span> </li>
+</ul>
+
+<h3>Miracle Wax 2.0</h3>
+<ul>
+	<li><span class="vevent" title="Miracle Wax 2.0"><span class="dtstart">2010-10-05</span>: <span class="summary">Project review</span></span></li>
+	<li><span class="vevent" title="Miracle Wax 2.0"><span class="dtstart">2010-10-06</span>: <span class="summary">Research</span></span></li> 
+	<li><span class="vevent" title="Miracle Wax 2.0"><span class="dtstart">2010-10-07</span>: <span class="summary">Planning sessions</span></span> </li>
+</ul>
+
+<h3>Calendar</h3>
+
+<p>And this is the information above presented as a calendar:</p>
+
+<div id='calendar'></div>
+
+<h2>hCalendar Markup</h2>
+
+<p>The HTML markup is essentially the <a href="http://microformats.org/wiki/hcalendar">hCalendar</a> microformat. We support the following fields:</p>
+
+<ul>
+	<li><tt>summary</tt></li>
+	<li><tt>dtstart</tt></li>
+	<li><tt>dtend</tt></li>
+	<li><tt>location</tt></li>
+	<li><tt>url</tt></li>
+</ul>
+
+<p>And we're introducing one new field: <tt>title</tt>, used as a means of categorisation. This allows you to group events relating to particular contexts. This is implemented as a <tt>title="..."</tt> HTML attribute on the vevent container tag (which means this still validates as XHTML.)</p>
+
+<p>Example markup:</p>
+
+<pre>
+&lt;span class=&quot;vevent&quot; title=&quot;Site Relaunch&quot;&gt;
+	&lt;span class=&quot;dtstart&quot;&gt;2010-10-01&lt;/span&gt;: &lt;span class=&quot;summary&quot;&gt;milestone 1&lt;/span&gt;
+&lt;/span&gt;
+</pre>
+
+</body>
+</html>
